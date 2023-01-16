@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+figure img {
+    /* Photo by "https://unsplash.com/es/@felix_mittermeier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" Felix Mittermeier on https://unsplash.com/images/nature/galaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"*/
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    image-rendering: optimizeQuality;
+}
+
+header {
+    padding: 20px;
+}
+
+header div{
+    padding-top: 20px;
+    margin-right: 10px;
+    float: right;
+    font-size: 20px;
+    display: block;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+}
