@@ -2,14 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-figure img {
-    /* Photo by "https://unsplash.com/es/@felix_mittermeier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" Felix Mittermeier on https://unsplash.com/images/nature/galaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"*/
-    background-position: center;
-    height: 250px;
-    width: 100%;
-    image-rendering: optimizeQuality;
+    overflow-x: hidden; /* hide horizontal scrollbar */
 }
 
 header {
@@ -40,4 +33,75 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
+}
+
+.banner img {
+    /* Photo by "https://unsplash.com/es/@felix_mittermeier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" Felix Mittermeier on https://unsplash.com/images/nature/galaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText*/
+    background-position: center;
+    height: auto;
+    width: 100%;
+    image-rendering: optimizeQuality;
+    background-size: cover;
+}
+
+/* create our main grid with flexbox, use negative margins to offset the padding on the .column class */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* margin-left: -1.5rem;
+    margin-right: -1.5rem; */
+
+    border: 5px solid pink;
+    margin-left: 20%;
+}
+  
+  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+.column {
+    flex: 1 0 100%;
+    
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid red;
+    margin-left: 5px;
+}
+
+
+
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  
+    
+}
+  
+  /* media query for larger screens */
+@media screen and (min-width: 992px) {
+
+    .row {
+        justify-content: space-evenly;
+    }
+
+    .column:first-child {
+        flex: 0 0 93%;
+        
+      }
+    
+    .column:first-child .img1 {
+        height: 500px;
+        width: auto;
+        background-size: cover;
+        border: 5px solid orange;
+    }
+    
+    .column {
+        flex: 0 0 45%;
+
+    }
+
+    .column img {
+        border: 5px solid orange;
+    }
+      
 }
