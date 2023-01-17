@@ -1,3 +1,12 @@
+:root {
+  --lightblue: #7b8eba;
+  --darkerblue: #ba7bad;
+}
+
+body {
+  background-color: var(--lightblue);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,15 +15,19 @@
 }
 
 header {
-  padding: 20px;
+  padding: 20px 0;
+  padding-right: 20px;
+}
+
+span h1 {
+  background-color: var(--darkerblue);
+  padding: 10px;
 }
 
 header div {
-  padding-top: 20px;
-  margin-right: 10px;
-  float: right;
-  font-size: 20px;
-  display: block;
+  font-size: 32px;
+  display: inline-block;
+  text-align: center;
 }
 
 header h1 {
@@ -35,6 +48,12 @@ header ul li a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  border: 4px solid pink;
+}
+
 .banner {
   margin-bottom: 2%;
 }
@@ -46,44 +65,115 @@ header ul li a {
   width: 100%;
   image-rendering: optimizeQuality;
   background-size: cover;
+  border: 0;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
-img {
-  width: 100%;
-  height: 100%;
+.column {
+  flex: 1 0;
+  padding: 10px;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+}
+
+article.main-column {
+  display: flex;
+  flex: 1 0 100%;
+}
+
+article.sub-column {
+  display: flex;
+  flex-basis: 100%;
+  /* flex-basis: 48%; */
+}
+
+aside {
+  display: none;
+}
+
+footer {
+  display: block;
+  text-align: center;
+}
+
+footer.column {
+  flex-basis: 70%;
+}
+
+footer a {
+  font-size: 20px;
+}
+
+footer ul {
+  list-style-type: none;
 }
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
+  aside {
+    display: flex;
+  }
+
+  aside h2 {
+    text-align: right; /* not aligning to the right*/
+    font-size: 32px;
+  }
+ 
+  aside.column {
+    flex-basis: 14%;
+    border-right: 1px solid red;
+  }
+
+  aside.column h2 {
+    padding-right: 20px;
+  }
+
+  p.column {
+    flex-basis: 70%;
+  }
+
+  article.main-column {
+    display: flex;
+    flex: 1 0 70%;
+  }
+
+  article.sub-column {
+    display: flex;
+    flex-basis: 31%;
+  }
+
+  .main-column:hover {
+    box-shadow: inset 0px 0px 8px #ba7bad, 0 0 15px #ba7bad;
+  }
+
+  .sub-column:hover {
+    box-shadow: inset 0px 0px 8px #ba7bad, 0 0 15px #ba7bad;
+  }
+
+  footer ul li {
+    display: inline-block;
+    padding-right: 5%;
+  }
+
+  footer ul li a {
+    text-decoration: none;
+    border-bottom: 1px solid red;
+    font-size: 24px;
+  }
 }
 
 /* media query for larger screens */
 @media screen and (min-width: 992px) {
-
-
-
-  footer {
+  header div {
     display: block;
-    text-align: left;
-    padding-left: 150px;
-  }
-  
-  footer a {
-    font-size: 32px;
-  }
-  
-  footer ul {
-    list-style-type: none;
-  }
-  
-  footer ul li {
-    display: inline-block;
-    margin-left: 4%;
-  }
-  
-  footer ul li a {
-    text-decoration: none;
-    border-bottom: 1px solid red;
+    padding-top: 20px;
+    margin-right: 10px;
+    float: right;
+    font-size: 36px;
   }
 }
