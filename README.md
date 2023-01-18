@@ -8,4 +8,4 @@ Created a web application to display a portfolio of work showcasing my skills an
 ![image of website](assets/images/website-demo.png)
 
 ## Link to Deploy
-[Website](https://akaydia.github.io/02-challenge/)
+[Website](https://akaydia.github.io/ricky-nguyen-portfolio/)
