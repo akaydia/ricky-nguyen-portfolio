@@ -5,7 +5,7 @@ Created a web application to display a portfolio of work showcasing my skills an
 - Used HTML and CSS to structure and style the page.
 
 ## Screenshot
-![image of website](assets/images/01-demopage.png)
+![image of website](assets/images/website-demo.png)
 
 ## Link to Deploy
 [Website](https://akaydia.github.io/02-challenge/)
