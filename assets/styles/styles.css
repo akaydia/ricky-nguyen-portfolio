@@ -1,3 +1,4 @@
+/* Root Elements, allows for global use of these variables */
 :root {
   --lightblue: #7b8eba;
   --darkerpink: #ba7bad;
@@ -10,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Universal Selector */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -24,25 +26,25 @@ p {
   font-size: 24px;
 }
 
+span h1 {
+  background-color: var(--darkerpink);
+  padding: 10px;
+}
+
 header {
   padding: 20px 0;
   padding-right: 20px;
 }
 
-span h1 {
-  background-color: var(--darkerpink);
-  padding: 10px;
+header h1 {
+  display: inline-block;
+  font-size: 48px;
 }
 
 header div {
   font-size: 32px;
   display: inline-block;
   text-align: center;
-}
-
-header h1 {
-  display: inline-block;
-  font-size: 48px;
 }
 
 header ul {
@@ -66,16 +68,6 @@ img {
   border: 4px solid var(--darkerpink);
 }
 
-figure.selfie {
-  text-align: center;
-}
-
-figure.selfie img {
-  margin: 2%;
-  width: 200px;
-  height: 300px;
-}
-
 .banner img {
   /* Photo by "https://unsplash.com/es/@felix_mittermeier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" Felix Mittermeier on https://unsplash.com/images/nature/galaxy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText*/
   background-position: center;
@@ -84,6 +76,16 @@ figure.selfie img {
   image-rendering: optimizeQuality;
   background-size: cover;
   border: 0;
+}
+
+figure.selfie {
+  text-align: center;
+}
+
+figure.selfie img {
+  margin: 2%;
+  width: 200px;
+  height: 300px;
 }
 
 main {
@@ -103,26 +105,26 @@ main {
   transition: flex-basis 500ms linear;
 }
 
+aside {
+  display: none;
+}
+/* Displays work portfolio to take the whole width of a mobile or similar width*/
 article.main-column {
   display: flex;
   flex: 1 0 100%;
 }
 
+/* Displays work portfolio to take the whole width of a mobile or similar width*/
 article.sub-column {
   display: flex;
   flex-basis: 100%;
-
 }
 
 article.main-column img {
   height: 90vh;
   width: 100%;
 }
-
-aside {
-  display: none;
-}
-
+/* Displays the footer in a block, for easier accessability*/
 footer {
   display: block;
   text-align: center;
@@ -175,6 +177,7 @@ footer ul {
     flex-basis: 31%;
   }
 
+  /*Adds a glowing effect when hovering over the examples of work in the portfolio*/
   .main-column:hover {
     box-shadow: inset 4px 4px 8px var(--darkerpink), 0 0 15px var(--darkerpink);
   }
@@ -183,6 +186,7 @@ footer ul {
     box-shadow: inset 4px 4px 8px var(--darkerpink), 0 0 15px var(--darkerpink);
   }
 
+  /*Displays the footer in a line, for easier accessability on a laptop or bigger screen */
   footer ul li {
     display: inline-block;
     padding-right: 5%;

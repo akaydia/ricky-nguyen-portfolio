@@ -14,32 +14,39 @@
     />
   </head>
   <body>
+    <!--Start of Header -->
     <header>
       <span class="name-header"><h1>Ricky Nguyen</h1></span>
       <div>
         <nav>
           <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Resume</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
           </ul>
         </nav>
       </div>
     </header>
+    <!--End of Header -->
 
+    <!--Start of Banner -->
     <figure class="banner">
       <img
         src="./assets/images/starry-background-image.png"
         alt="starry background image from the milkyway"
       />
     </figure>
+    <!--End of Banner -->
 
+    <!--Start of main section-->
     <main>
-      <figure class="selfie"><img src="./assets/images/selfie.png" /></figure>
+      <figure class="selfie">
+        <img src="./assets/images/selfie.png" alt="picture of a person" />
+      </figure>
       <section class="row">
         <aside class="column margin-bot">
-          <h2>About Me</h2>
+          <h2 id="about-me">About Me</h2>
         </aside>
         <p class="column">
           Hey there, I'm Ricky Nguyen and I want to become a great full stack
@@ -47,10 +54,12 @@
         </p>
       </section>
 
+      <!-- Start of portfolio-->
       <section class="row">
         <aside class="column">
-          <h2 class="work">Work</h2>
+          <h2 class="work" id="work">Work</h2>
         </aside>
+        <!--main work example-->
         <article class="column main-column">
           <a href="https://akaydia.github.io/02-challenge/"
             ><img
@@ -59,6 +68,7 @@
             />
           </a>
         </article>
+        <!--end of main work example-->
       </section>
 
       <section class="row">
@@ -83,9 +93,11 @@
 
       <!-- end of portfolio-->
 
+      <!--Start of contact me section-->
+
       <section class="row">
         <aside class="column">
-          <h2>Contact Me</h2>
+          <h2 id="contact">Contact Me</h2>
         </aside>
 
         <footer class="column">
@@ -98,6 +110,8 @@
           </ul>
         </footer>
       </section>
+      <!--End of contact me section-->
     </main>
+    <!--Start of main section-->
   </body>
 </html>
