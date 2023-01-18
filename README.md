@@ -1,4 +1,4 @@
-# ricky-nguyen-portfolio
+# Ricky Nguyen Portfolio
 
 ## Description
 Created a web application to display a portfolio of work showcasing my skills and talented for future employers seeking to fill a part-time or full time position.
