@@ -5,7 +5,7 @@ Created a web application to display a portfolio of work showcasing my skills an
 - Used HTML and CSS to structure and style the page.
 
 ## Screenshot
-![image of website](assets/images/password-generator-demo.png)
+![image of website](assets/images/website-demo.png)
 
 ## Link to Deploy
-[Website](https://akaydia.github.io/password-generator/)
+[Website](https://akaydia.github.io/ricky-nguyen-portfolio/)
